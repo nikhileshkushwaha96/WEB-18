@@ -293,17 +293,30 @@ mensData.forEach(function(elem ) {
 
    var cart = document.createElement("button")
    cart.textContent="Add to cart"
+   cart.addEventListener("click",function(){
+    myfun()
+
+   })
+   
 
 
    card.append(image,name,price,strike,cart)
 
    document.querySelector("#container").append(card)
 
+   function myfun(){
+    var p= localStorage.setItem("addcart",JSON.stringify(elem))
+    
+    
+   
+   }
 
 
 
 
 });
+
+
 
 
 
